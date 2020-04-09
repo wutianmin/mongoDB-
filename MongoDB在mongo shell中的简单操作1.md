@@ -95,6 +95,10 @@ db.<collection>.find()
 + 查询文档数量 ==`find().count()`==
 
 **如果查询内嵌文档，field和value都必须加引号**
+如
+```
+db.<collection>.find({'hobby.movies':'good'})
+```
 
 ### 更新文档 ==`update()`==
 
