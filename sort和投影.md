@@ -21,11 +21,13 @@ db.emp.find().sort({salary:1})
 **`limit()`,`skip()`,`sort()`三者可以以任意的顺序进行调用**
 
 ### 投影
+如果只想读取某字段的数据，在find()后添加参数
+*默认_id都会显示*
+```
+db.collection.find({<query document>},{<projection document>})
+```
+<field>:1 读取该字段
+<field>:0 不读取该字段
 
-如果只想读取某一栏数据，在find()后添加参数，*默认_id都会显示*
-
-`find({},{xx:1})`
-
-不显示_id
-
+如，读取xx字段，且不显示_id
 `find({},{xx:1,_id:0})`
