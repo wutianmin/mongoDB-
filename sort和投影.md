@@ -26,8 +26,8 @@ db.emp.find().sort({salary:1})
 ```
 db.collection.find({<query document>},{<projection document>})
 ```
-<field>:1 读取该字段
-<field>:0 不读取该字段
+`<field>:1` 读取该字段
+`<field>:0` 不读取该字段
 
 如，读取xx字段，且不显示_id
 `find({},{xx:1,_id:0})`
